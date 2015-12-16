@@ -21,17 +21,19 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 *, *:before, *:after { -webkit-box-sizing: inherit; box-sizing: inherit; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-.icon, [class^="icon-"], [class*=" icon-"], .player .player__next, .player .player__prev, .gallery .gallery__next, .gallery .gallery__prev { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.icon, [class^="icon-"], [class*=" icon-"], .player .player__next, .player .player__prev, .gallery .gallery__next, .gallery .gallery__prev, .popup .popup__close, .popup .popup__next, .popup .popup__prev { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .icon, [class^="icon-"], [class*=" icon-"] { display: inline-block; }
 
+.icon-x:before, .popup .popup__close:before, .popup .popup__next:before, .popup .popup__prev:before { content: ""; }
+
 .icon-next:before, .player .player__next:before { content: ""; }
 
-.icon-next1:before, .gallery .gallery__next:before { content: ""; }
+.icon-next1:before, .gallery .gallery__next:before, .popup .popup__next:before { content: ""; }
 
 .icon-prev:before, .player .player__prev:before { content: ""; }
 
-.icon-prev1:before, .gallery .gallery__prev:before { content: ""; }
+.icon-prev1:before, .gallery .gallery__prev:before, .popup .popup__prev:before { content: ""; }
 
 .slick-slider { position: relative; display: block; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
@@ -94,7 +96,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .header__lang { position: absolute; text-align: right; top: 103px; right: 194px; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .header__lang a { text-decoration: none; color: #888888; font-size: 12px; margin-left: 20px; text-transform: uppercase; }
 .header__lang a:hover, .header__lang a.is-active { color: #fff; }
-.header__fb { position: absolute; top: 94px; right: 96px; display: inline-block; text-decoration: none; background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -155px -41px; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.header__fb { position: absolute; top: 94px; right: 96px; display: inline-block; text-decoration: none; background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -155px -41px; -webkit-transition: top 0.2s linear; transition: top 0.2s linear; }
 .header__fb:hover { background-position: -204px -132px; }
 .header__down { position: absolute; right: 0; top: 0; text-align: center; width: 270px; height: 75px; cursor: pointer; background: #ffffff; line-height: 75px; font-size: 11px; letter-spacing: 2px; color: #050505; text-transform: uppercase; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .header__down:hover { color: #fff; background: #151515; }
@@ -147,6 +149,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .gallery .events ul li { margin-bottom: 12px; text-transform: uppercase; }
 .gallery .events ul li strong { font-weight: 700; }
 .gallery .events .events__more, .gallery .events .events__less { clear: both; padding-top: 35px; font-weight: 700; letter-spacing: 3px; }
+.gallery .events .events__more:hover, .gallery .events .events__less:hover { opacity: 0.5; }
 .gallery .events .events__more a, .gallery .events .events__less a { text-decoration: none; font-size: 11px; text-transform: uppercase; color: #171717; }
 .gallery .events .events__more a i, .gallery .events .events__less a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; display: inline-block; margin-left: 14px; position: relative; top: 2px; }
 .gallery .events .events__less { text-align: right; padding-right: 50px; }
@@ -174,8 +177,18 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .footer__info span { text-transform: uppercase; }
 .footer__info span, .footer__info a { text-decoration: none; color: #fff; letter-spacing: 2px; }
 .footer__info a { font-size: 13px; }
-.footer__dev { position: absolute; right: 60px; text-align: right; font-size: 12px; width: 200px; color: #888888; }
-.footer__dev a { background-image: url("../img/icons.png"); width: 70px; height: 13px; background-position: -167px -181px; display: inline-block; font: 0/0 a; text-shadow: none; color: transparent; vertical-align: middle; margin-left: 10px; }
+.footer__dev { position: absolute; right: 60px; text-align: right; font-size: 12px; width: 200px; color: #888888; padding-top: 1px; }
+.footer__dev a { background-image: url("../img/icons.png"); width: 70px; height: 13px; background-position: -167px -181px; display: inline-block; font: 0/0 a; text-shadow: none; color: transparent; vertical-align: middle; margin-left: 10px; position: relative; top: -2px; }
+.footer__dev a:hover { opacity: 0.5; }
+
+.popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000; background: rgba(0, 0, 0, 0.85); display: none; }
+.popup .popup__close { position: absolute; top: 50px; right: 50px; font-size: 45px; color: #fff; cursor: pointer; z-index: 30; }
+.popup .popup__next, .popup .popup__prev { font-size: 90px; color: #fff; opacity: 0.7; cursor: pointer; top: 50%; position: absolute; margin-top: -40px; z-index: 20; }
+.popup .popup__next:hover, .popup .popup__prev:hover { opacity: 1; }
+.popup .popup__next { right: 50px; }
+.popup .popup__prev { left: 50px; }
+.popup .popup__slides { position: absolute; top: 120px; bottom: 70px; left: 110px; right: 110px; }
+.popup .popup__slides .popup__slide { width: 100%; height: 100%; background-size: cover; left: 0; top: 0; bottom: 0; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
