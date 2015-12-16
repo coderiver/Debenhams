@@ -71,9 +71,7 @@ $(document).ready(function() {
 		});
 	});
 
-	function loadvid(el){
 
-	}
 
 	$('.header__down').click(function(event) {
 		target = $('.pages');
@@ -89,6 +87,7 @@ $(document).ready(function() {
 		h = $('.header');
 		if(st>wh-75){
 			h.addClass('is-header');
+			stopall();
 		}
 		else{
 			h.removeClass('is-header');
@@ -112,6 +111,12 @@ $(document).ready(function() {
 			video.pause();
 			$(this).toggleClass('is-paused');
 		}
+		return false;
+	});
+	$('.events__more,.events__less').click(function(event) {
+		$('.events').toggleClass("is-wide").find('.is-hidden').toggle();
+		$('.gallery__pics').toggle();
+		$('.events__more').toggle();
 		return false;
 	});
 

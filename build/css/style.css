@@ -74,7 +74,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .top .top__inner { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .top .top__slide { width: 100%; height: 100vh; position: relative; }
 .top .top__video { width: 100%; position: absolute; bottom: 75px; bottom: 0; left: 0; right: 0; top: 0; }
-.top .top__video video { position: absolute; left: 0; bottom: 0; min-width: 100%; min-height: 100%; width: 100%; height: 100%; }
+.top .top__video video { position: absolute; left: 0; top: 0; min-width: 100%; width: 100%; object-fit: contain; }
 
 .player { position: absolute; left: 50%; top: 10px; width: 200px; margin-left: -100px; text-align: center; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .player .player__next, .player .player__prev { color: #b1b1b1; font-size: 20px; cursor: pointer; display: inline-block; vertical-align: middle; }
@@ -138,22 +138,28 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .pages__nav .page_8 i { background-image: url("../img/icons.png"); width: 60px; height: 61px; background-position: -204px -67px; }
 .pages__nav .page_8:hover { background: #fa580a; }
 
-.gallery { overflow: hidden; min-height: 412px; background: #fff; }
-.gallery .events { float: left; width: 50%; padding: 61px 0 0 93px; }
+.gallery { overflow: hidden; min-height: 412px; background: #fff; position: relative; }
+.gallery .events { float: left; width: 50%; padding: 61px 0 20px 93px; position: absolute; left: 0; top: 0; z-index: 20; background: #fff; }
+.gallery .events.is-wide { width: 100%; }
 .gallery .events h2 { font-size: 36px; font-weight: 100; letter-spacing: 5px; margin-bottom: 30px; }
 .gallery .events p { font-size: 14px; color: #999999; margin-bottom: 20px; text-transform: uppercase; }
 .gallery .events ul { width: 190px; float: left; font-size: 14px; color: #555555; }
 .gallery .events ul li { margin-bottom: 12px; text-transform: uppercase; }
 .gallery .events ul li strong { font-weight: 700; }
-.gallery .events .events__more { clear: both; padding-top: 35px; font-weight: 700; letter-spacing: 3px; }
-.gallery .events .events__more a { text-decoration: none; font-size: 11px; text-transform: uppercase; color: #171717; }
-.gallery .events .events__more a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; display: inline-block; margin-left: 14px; position: relative; top: 2px; }
+.gallery .events .events__more, .gallery .events .events__less { clear: both; padding-top: 35px; font-weight: 700; letter-spacing: 3px; }
+.gallery .events .events__more a, .gallery .events .events__less a { text-decoration: none; font-size: 11px; text-transform: uppercase; color: #171717; }
+.gallery .events .events__more a i, .gallery .events .events__less a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; display: inline-block; margin-left: 14px; position: relative; top: 2px; }
+.gallery .events .events__less { text-align: right; padding-right: 50px; }
+.gallery .events .events__less i { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); margin-right: 14px; }
 .gallery__pics { float: right; height: 412px; width: 50%; position: relative; }
 .gallery .gallery__slide { height: 412px; background-size: cover; }
 .gallery .gallery__slide a { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
-.gallery .gallery__next, .gallery .gallery__prev { display: inline-block; position: absolute; top: 170px; color: #fff; font-size: 80px; z-index: 10; cursor: pointer; }
+.gallery .gallery__next, .gallery .gallery__prev { display: inline-block; position: absolute; top: 170px; color: #fff; font-size: 80px; z-index: 10; cursor: pointer; opacity: 0.6; }
+.gallery .gallery__next:hover, .gallery .gallery__prev:hover { opacity: 1; }
 .gallery .gallery__prev { left: 40px; }
 .gallery .gallery__next { right: 40px; }
+
+.is-hidden { display: none; }
 
 .logos { background: #f2f2f2; text-align: center; padding-top: 63px; padding-bottom: 60px; }
 .logos h2, .logos h3 { font-size: 36px; font-weight: 100; color: #161616; letter-spacing: 5px; margin-bottom: 20px; text-transform: uppercase; }

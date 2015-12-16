@@ -2,10 +2,18 @@
 	overflow: hidden
 	min-height: 412px 
 	background: #fff 
+	position: relative
 	.events
 		float: left
 		width: 50% 
-		padding: 61px 0 0 93px 
+		padding: 61px 0 20px 93px 
+		position: absolute
+		left: 0
+		top: 0  
+		z-index: 20 
+		background: #fff 
+		&.is-wide
+			width: 100% 
 		h2
 			font-size: 36px 
 			font-weight: 100
@@ -26,7 +34,7 @@
 				text-transform: uppercase
 				strong
 					font-weight: 700 
-		.events__more
+		.events__more,.events__less
 			clear: both
 			padding-top: 35px 
 			font-weight: 700 
@@ -42,6 +50,12 @@
 					margin-left: 14px 
 					position: relative
 					top: 2px 
+		.events__less
+			text-align: right
+			padding-right: 50px 
+			i
+				transform: rotate(180deg)
+				margin-right: 14px 
 	&__pics
 		float: right
 		height: 412px 
@@ -66,9 +80,14 @@
 		font-size: 80px 
 		z-index: 10 
 		cursor: pointer
+		opacity: .6
+		&:hover
+			opacity: 1 
 	.gallery__prev
 		@extend .icon-prev1
 		left: 40px 
 	.gallery__next
 		@extend .icon-next1
 		right: 40px 
+.is-hidden
+	display: none
