@@ -9,6 +9,10 @@ gulp.task('copy', function() {
    .pipe(gulp.dest(config.dest.css+'fonts/'));
    gulp.src(config.src.root+'video/*.*')
    .pipe(gulp.dest(config.dest.root+'video/'));
+   gulp.src(config.src.root+'img/logo/*.*')
+   .pipe(gulp.dest(config.dest.root+'img/logo/'));
+   gulp.src(config.src.root+'img/photo/*.*')
+   .pipe(gulp.dest(config.dest.root+'img/photo/'));
 });
 
 gulp.task('copy:watch', function() {
