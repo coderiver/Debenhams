@@ -174,7 +174,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .logos ul { font-size: 0; }
 .logos li { display: inline-block; margin: 0 30px 30px 0; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
 
-.footer { background: #161616; height: 40px; line-height: 40px; position: relative; }
+.footer { background: #161616; height: 42px; line-height: 40px; position: relative; }
 .footer__copy { font-size: 12px; color: #888888; float: left; margin-left: 90px; }
 .footer__info { position: absolute; left: 50%; top: 0; text-align: center; width: 500px; margin-left: -250px; font-size: 12px; color: #555555; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .footer__info b { margin: 0 20px; font-weight: normal; }
@@ -206,6 +206,10 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .back.back_white a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -214px; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
+
+.rezervace { background: #212121; position: relative; padding: 45px 100px; }
+.rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 15px; }
+.rezervace .back { position: absolute; right: 100px; top: 50px; }
 
 .kontakt { *zoom: 1; position: relative; }
 .kontakt:after { content: " "; display: table; clear: both; }

@@ -63,7 +63,7 @@ $(document).ready(function() {
 
 
 	$('.header__down').click(function(event) {
-		target = $('.pages');
+		target = $('.header-placeholder');
 		stopall();
 		$('html,body').animate({
           scrollTop: target.offset().top
