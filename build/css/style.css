@@ -207,6 +207,18 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
 
+.lide { position: relative; text-align: center; min-height: 70vh; padding-top: 60px; }
+.lide h2 { font-size: 36px; font-weight: 100; text-align: center; margin-bottom: 25px; letter-spacing: 3px; }
+.lide h3 { font-size: 14px; font-weight: normal; color: #999999; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 35px; }
+.lide .back { top: 50px; right: 100px; position: absolute; }
+
+.person { display: inline-block; margin: 0 60px; text-align: center; }
+.person__pic { width: 131px; height: 131px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #ccc; background-size: cover; margin: 0 auto; margin-bottom: 10px; }
+.person__name { font-size: 14px; color: #555555; font-weight: 700; }
+.person__pos { font-size: 14px; font-weight: normal; margin-top: 0px; margin-bottom: 10px; }
+.person__phone { font-weight: 700; letter-spacing: 1px; color: #000000; font-size: 14px; margin-top: 3px; }
+.person a { color: #000000; text-decoration: underline; font-size: 14px; }
+
 .akce { background: #212121; position: relative; padding-top: 54px; padding-bottom: 100px; padding-left: 100px; padding-right: 100px; }
 .akce .back { top: 50px; right: 100px; position: absolute; }
 .akce h2 { text-align: center; font-weight: 100; color: #fff; font-size: 36px; margin-bottom: 43px; }
