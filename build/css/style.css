@@ -211,7 +211,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .kontakt:after { content: " "; display: table; clear: both; }
 .kontakt .back { position: absolute; top: 125px; right: 100px; background: #fff; z-index: 20; padding: 3px 10px; }
 .kontakt .kontakt__content { float: left; width: 50%; padding: 118px 80px 80px 94px; min-height: 80vh; }
-.kontakt .kontakt__right { float: right; width: 50%; min-height: 100vh; }
+.kontakt .kontakt__right { float: right; width: 50%; min-height: 100vh; position: relative; }
+.kontakt .kontakt__right #map { position: absolute; top: 0; left: 0; right: 0; bottom: 42px; }
 
 .cenik { position: relative; min-height: 100vh; overflow: hidden; }
 .cenik:before { width: 50%; z-index: -1; position: absolute; bottom: 0; top: 0; height: 100%; right: 0; background: #1fcb73; content: " "; }

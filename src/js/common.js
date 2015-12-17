@@ -49,7 +49,7 @@ $(document).ready(function() {
 	  $('.js-play').addClass('is-paused');
 	  newvid.play();
 	});
-	if($('.slick-current').find('video').size>0){
+	if($('.slick-current').find('video').size()>0){
 		$('.slick-current').find('video')[0].play();
 		$('.js-play').addClass("is-paused");
 	}
@@ -61,6 +61,20 @@ $(document).ready(function() {
 			$(".js-slider").slick('slickNext');
 		});
 	});
+
+	if($('body').hasClass("is-home")){
+		if(window.location.hash) {
+		     var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+		     		target = $('.header-placeholder');
+		     		stopall();
+		     		$('html,body').animate({
+		               scrollTop: target.offset().top
+		             }, 500);
+
+		 } else {
+		     // No hash found
+		 }
+	}
 
 
 
