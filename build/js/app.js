@@ -73,9 +73,11 @@ $(document).ready(function() {
 	  $('.js-play').addClass('is-paused');
 	  newvid.play();
 	});
-
-	$('.slick-current').find('video')[0].play();
-	$('.js-play').addClass("is-paused");
+	if($('.slick-current').find('video').size>0){
+		$('.slick-current').find('video')[0].play();
+		$('.js-play').addClass("is-paused");
+	}
+	
 
 	$('video').each(function(index, el) {
 		$(this).on('ended', function(event) {
@@ -158,6 +160,27 @@ $(document).ready(function() {
 	$('.popup__close').click(function(event) {
 		$('.popup').hide();
 		$(".js-popup").slick("unslick");
+	});
+
+	//booking
+	function loadbooklist(){
+		year = $('.years .is-active').text();
+		month = $('.monthes li a.is-active').parent().index();
+		month = month + 1;
+		if(month<10){month = '0'+month;}
+		$('.booklist').hide();
+		$('#'+year+''+month).show();
+	}
+	loadbooklist();
+	$('.years a').click(function(event) {
+		$(this).siblings().removeClass('is-active');
+		$(this).addClass('is-active');
+		loadbooklist();
+	});
+	$('.monthes a').click(function(event) {
+		$('.monthes a').removeClass('is-active');
+		$(this).addClass('is-active');
+		loadbooklist();
 	});
 
 });

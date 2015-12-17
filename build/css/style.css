@@ -153,7 +153,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .gallery .events .events__more, .gallery .events .events__less { clear: both; padding-top: 35px; font-weight: 700; letter-spacing: 3px; }
 .gallery .events .events__more:hover, .gallery .events .events__less:hover { opacity: 0.5; }
 .gallery .events .events__more a, .gallery .events .events__less a { text-decoration: none; font-size: 11px; text-transform: uppercase; color: #171717; }
-.gallery .events .events__more a i, .gallery .events .events__less a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; display: inline-block; margin-left: 14px; position: relative; top: 2px; }
+.gallery .events .events__more a i, .gallery .events .events__less a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: 0px -249px; display: inline-block; margin-left: 14px; position: relative; top: 2px; }
 .gallery .events .events__less { text-align: right; padding-right: 50px; }
 .gallery .events .events__less i { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); margin-right: 14px; }
 .gallery__pics { float: right; height: 412px; width: 50%; position: relative; }
@@ -199,17 +199,13 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .back { font-weight: 700; letter-spacing: 3px; float: right; }
 .back:hover { opacity: 0.5; }
 .back a { text-decoration: none; font-size: 11px; text-transform: uppercase; color: #171717; }
-.back a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; display: inline-block; position: relative; top: 2px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); margin-right: 14px; }
+.back a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: 0px -249px; display: inline-block; position: relative; top: 2px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); margin-right: 14px; }
 .back.back_white { color: #fff; opacity: 0.5; }
 .back.back_white:hover { opacity: 1; }
 .back.back_white a { color: #fff; }
 .back.back_white a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -214px; -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
-
-.rezervace { background: #212121; position: relative; padding: 45px 100px; }
-.rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 15px; }
-.rezervace .back { position: absolute; right: 100px; top: 50px; }
 
 .kontakt { *zoom: 1; position: relative; min-height: 100vh; }
 .kontakt:after { content: " "; display: table; clear: both; }
@@ -272,6 +268,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .akce__item_2 { background: #eb4674; }
 .akce__item_3 { background: #de3f6b; }
 
+.rezervace { min-height: 100vh; padding-top: 110px; }
+
 .ledpanel { max-width: 970px; margin: 0 auto; padding: 115px 0 100px 0; min-height: 100vh; }
 .ledpanel .back a { text-decoration: none; }
 
@@ -290,6 +288,29 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .text h3 { font-size: 14px; text-transform: uppercase; color: #999999; margin-bottom: 13px; letter-spacing: 5px; font-weight: normal; }
 .text ul { list-style-type: disc; margin: 1em 2em; }
 .text h2 { font-weight: 100; font-size: 36px; margin-bottom: 26px; color: #171717; text-transform: uppercase; letter-spacing: 5px; }
+
+.rezervace { background: #212121; position: relative; padding: 45px 100px; padding-top: 110px; }
+.rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 10px; }
+.rezervace .back { position: absolute; right: 100px; top: 50px; }
+
+.years { text-align: center; font-size: 13px; color: #fff; text-transform: uppercase; margin-bottom: 28px; }
+.years a { color: #888; margin: 0 5px; letter-spacing: 2px; text-decoration: none; }
+.years a.is-active, .years a:hover { color: #fff; }
+
+.monthes { height: 25px; }
+.monthes ul { text-align: justify; line-height: 0; font-size: 0; text-justify: newspaper; zoom: 1; -moz-text-align-last: justify; text-align-last: justify; }
+.monthes ul:after { content: ""; display: inline-block; width: 100%; height: 0px; visibility: hidden; overflow: hidden; }
+.monthes li { display: inline-block; }
+.monthes li a { font-size: 13px; color: #888; text-transform: uppercase; text-decoration: none; letter-spacing: 2px; }
+.monthes li a:hover, .monthes li a.is-active { color: #fff; }
+
+.booklist { font-size: 0; display: none; }
+
+.book { display: inline-block; width: 16.6%; height: 87px; padding: 12px 0 0 16px; background: #fff; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); }
+.book.is-pre { background: #e6e6e6; }
+.book.is-booked { background: #eeca39; }
+.book__num { font-size: 12px; text-transform: uppercase; color: #8c8c8c; letter-spacing: 2px; margin-bottom: 10px; }
+.book__text { font-size: 14px; color: #171717; text-transform: uppercase; letter-spacing: 1px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
