@@ -207,6 +207,28 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
 
+.cenik { position: relative; *zoom: 1; }
+.cenik:after { content: " "; display: table; clear: both; }
+.cenik .back { position: absolute; top: 50px; right: 100px; opacity: 1 !important; }
+.cenik .back:hover { opacity: 0.5 !important; }
+.cenik .cenik__right { width: 50%; background: #1fcb73; float: right; min-height: 80vh; padding: 125px 80px 80px 94px; }
+.cenik .cenik__right h3 { text-transform: uppercase; color: #fff; font-size: 14px; letter-spacing: 3px; font-weight: normal; margin-bottom: 5px; }
+.cenik .cenik__right p { color: #000; font-size: 14px; margin-bottom: 34px; }
+.cenik .cenik__right p strong { text-transform: uppercase; font-weight: 700; letter-spacing: 3px; }
+.cenik .cenik__right p a { color: #000; text-decoration: underline; }
+.cenik .cenik__content { float: left; width: 50%; min-height: 80vh; background: #fff; padding: 60px 100px 100px 94px; }
+
+.form { font-size: 0; padding-top: 5px; }
+.form input[type=text] { font-size: 14px; background: #fff; height: 43px; padding: 0 10px; line-height: normal; width: 50%; }
+.form input[type=text].is-first { border-right: 10px solid #1fcb73; }
+.form input[type=text]::-webkit-input-placeholder { color: #999999; }
+.form input[type=text]::-moz-placeholder { color: #999999; }
+.form input[type=text]:-ms-input-placeholder { color: #999999; }
+.form input[type=text]::placeholder { color: #999999; }
+.form textarea { font-size: 14px; margin-top: 10px; color: #999; padding: 10px 15px; height: 88px; display: block; width: 100%; border: none; margin-bottom: 10px; }
+.form input[type=submit] { border: 2px solid #fff; color: #fff; background: transparent; font-weight: 700; font-size: 14px; color: #fff; text-align: center; width: 50%; padding: 10px 0; }
+.form input[type=submit]:hover { background: #fff; color: #1fcb73; }
+
 .lide { position: relative; text-align: center; min-height: 70vh; padding-top: 60px; }
 .lide h2 { font-size: 36px; font-weight: 100; text-align: center; margin-bottom: 25px; letter-spacing: 3px; }
 .lide h3 { font-size: 14px; font-weight: normal; color: #999999; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 35px; }
