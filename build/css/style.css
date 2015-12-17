@@ -194,7 +194,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .popup .popup__slides { position: absolute; top: 120px; bottom: 70px; left: 110px; right: 110px; }
 .popup .popup__slides .popup__slide { width: 100%; height: 100%; background-size: cover; left: 0; top: 0; bottom: 0; }
 
-.is-inside { padding-top: 75px; }
+.is-inside .footer { margin-top: -42px; }
 
 .back { font-weight: 700; letter-spacing: 3px; float: right; }
 .back:hover { opacity: 0.5; }
@@ -211,22 +211,22 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 15px; }
 .rezervace .back { position: absolute; right: 100px; top: 50px; }
 
-.kontakt { *zoom: 1; position: relative; }
+.kontakt { *zoom: 1; position: relative; min-height: 100vh; }
 .kontakt:after { content: " "; display: table; clear: both; }
-.kontakt .back { position: absolute; top: 50px; right: 100px; background: #fff; z-index: 20; padding: 3px 10px; }
-.kontakt .kontakt__content { float: left; width: 50%; padding: 43px 80px 80px 94px; min-height: 80vh; }
-.kontakt .kontakt__right { float: right; width: 50%; min-height: 80vh; }
+.kontakt .back { position: absolute; top: 125px; right: 100px; background: #fff; z-index: 20; padding: 3px 10px; }
+.kontakt .kontakt__content { float: left; width: 50%; padding: 118px 80px 80px 94px; min-height: 80vh; }
+.kontakt .kontakt__right { float: right; width: 50%; min-height: 100vh; }
 
-.cenik { position: relative; *zoom: 1; }
-.cenik:after { content: " "; display: table; clear: both; }
-.cenik .back { position: absolute; top: 50px; right: 100px; opacity: 1 !important; }
+.cenik { position: relative; min-height: 100vh; overflow: hidden; }
+.cenik:before { width: 50%; z-index: -1; position: absolute; bottom: 0; top: 0; height: 100%; right: 0; background: #1fcb73; content: " "; }
+.cenik .back { position: absolute; top: 125px; right: 100px; opacity: 1 !important; }
 .cenik .back:hover { opacity: 0.5 !important; }
-.cenik .cenik__right { width: 50%; background: #1fcb73; float: right; min-height: 80vh; padding: 125px 80px 80px 94px; }
+.cenik .cenik__right { width: 50%; background: #1fcb73; float: right; min-height: 80vh; padding: 200px 80px 80px 94px; }
 .cenik .cenik__right h3 { text-transform: uppercase; color: #fff; font-size: 14px; letter-spacing: 3px; font-weight: normal; margin-bottom: 5px; }
 .cenik .cenik__right p { color: #000; font-size: 14px; margin-bottom: 34px; }
 .cenik .cenik__right p strong { text-transform: uppercase; font-weight: 700; letter-spacing: 3px; }
 .cenik .cenik__right p a { color: #000; text-decoration: underline; }
-.cenik .cenik__content { float: left; width: 50%; min-height: 80vh; background: #fff; padding: 60px 100px 100px 94px; }
+.cenik .cenik__content { float: left; width: 50%; min-height: 80vh; background: #fff; padding: 125px 100px 100px 94px; }
 
 .form { font-size: 0; padding-top: 5px; }
 .form input[type=text] { font-size: 14px; background: #fff; height: 43px; padding: 0 10px; line-height: normal; width: 50%; }
@@ -239,10 +239,10 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .form input[type=submit] { border: 2px solid #fff; color: #fff; background: transparent; font-weight: 700; font-size: 14px; color: #fff; text-align: center; width: 50%; padding: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
 .form input[type=submit]:hover { background: #fff; color: #1fcb73; }
 
-.lide { position: relative; text-align: center; min-height: 70vh; padding-top: 60px; }
+.lide { position: relative; text-align: center; min-height: 100vh; padding-top: 135px; }
 .lide h2 { font-size: 36px; font-weight: 100; text-align: center; margin-bottom: 25px; letter-spacing: 3px; }
 .lide h3 { font-size: 14px; font-weight: normal; color: #999999; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 35px; }
-.lide .back { top: 50px; right: 100px; position: absolute; }
+.lide .back { top: 125px; right: 100px; position: absolute; }
 
 .person { display: inline-block; margin: 0 60px; text-align: center; }
 .person__pic { width: 131px; height: 131px; -webkit-border-radius: 50%; border-radius: 50%; background-color: #ccc; background-size: cover; margin: 0 auto; margin-bottom: 10px; }
@@ -251,8 +251,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .person__phone { font-weight: 700; letter-spacing: 1px; color: #000000; font-size: 14px; margin-top: 3px; }
 .person a { color: #000000; text-decoration: underline; font-size: 14px; }
 
-.akce { background: #212121; position: relative; padding-top: 54px; padding-bottom: 100px; padding-left: 100px; padding-right: 100px; }
-.akce .back { top: 50px; right: 100px; position: absolute; }
+.akce { background: #212121; position: relative; padding-top: 129px; padding-bottom: 100px; padding-left: 100px; padding-right: 100px; min-height: 100vh; }
+.akce .back { top: 125px; right: 100px; position: absolute; }
 .akce h2 { text-align: center; font-weight: 100; color: #fff; font-size: 36px; margin-bottom: 43px; }
 .akce__info { text-align: center; margin-top: 40px; }
 .akce__info strong { text-align: center; font-size: 14px; font-weight: normal; color: #999999; letter-spacing: 3px; display: block; text-transform: uppercase; }
@@ -272,15 +272,16 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .akce__item_2 { background: #eb4674; }
 .akce__item_3 { background: #de3f6b; }
 
-.ledpanel { max-width: 970px; margin: 0 auto; padding: 40px 0 100px 0; }
+.ledpanel { max-width: 970px; margin: 0 auto; padding: 115px 0 100px 0; min-height: 100vh; }
+.ledpanel .back a { text-decoration: none; }
 
-.smycka { position: relative; }
-.smycka .back { position: absolute; right: 100px; top: 50px; z-index: 10; color: #fff; }
+.smycka { position: relative; min-height: 100vh; }
+.smycka .back { position: absolute; right: 100px; top: 125px; z-index: 10; color: #fff; }
 .smycka .back a { color: #fff; }
 .smycka .back a:hover { color: #000; }
 .smycka .back a i { background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -214px; -webkit-transform: rotate(0); -ms-transform: rotate(0); transform: rotate(0); }
-.smycka .smycka__content { padding: 53px 550px 100px 93px; }
-.smycka .smycka__pic { position: absolute; right: 0; top: 0; bottom: 0; width: 470px; background: url(../img/smycka.png) no-repeat 50% 50%; background-size: cover; }
+.smycka .smycka__content { padding: 125px 550px 100px 93px; }
+.smycka .smycka__pic { position: absolute; right: 0; top: 0; bottom: 0; width: 470px; min-height: 100vh; background: url(../img/smycka.png) no-repeat 50% 50%; background-size: cover; }
 
 .text { font-size: 14px; font-size: 14px; color: #555555; line-height: 1.3; }
 .text p { margin-bottom: 1.1em; }

@@ -1,5 +1,7 @@
 .is-inside
-	padding-top: 75px 
+	// padding-top: 75px 
+	.footer
+		margin-top: -42px 
 .back
 	font-weight: 700 
 	letter-spacing: 3px 
@@ -28,7 +30,6 @@
 			i
 				+s(arrowleft)
 				transform: rotate(0deg)
-
 .twocols
 	column-count: 2
 	column-gap: 40px
@@ -52,9 +53,10 @@
 .kontakt
 	+clr
 	position: relative
+	min-height: 100vh 
 	.back
 		position: absolute
-		top: 50px 
+		top: 50px + 75px 
 		right: 100px 
 		background: #fff 
 		z-index: 20 
@@ -62,18 +64,29 @@
 	.kontakt__content
 		float: left
 		width: 50%
-		padding: 43px 80px 80px 94px 
+		padding: 118px 80px 80px 94px 
 		min-height: 80vh 
 	.kontakt__right
 		float: right
 		width: 50% 
-		min-height: 80vh 
+		min-height: 100vh 
 .cenik
 	position: relative
-	+clr
+	min-height: 100vh 
+	overflow: hidden
+	&:before
+		width: 50%
+		z-index: -1
+		position: absolute
+		bottom: 0
+		top: 0
+		height: 100% 
+		right: 0
+		background: #1fcb73  
+		content: ' '     
 	.back
 		position: absolute
-		top: 50px 
+		top: 50px + 75px
 		right: 100px 
 		opacity: 1 !important 
 		&:hover
@@ -83,7 +96,7 @@
 		background: #1fcb73  
 		float: right
 		min-height: 80vh 
-		padding: 125px 80px 80px 94px 
+		padding: 200px 80px 80px 94px 
 		h3
 			text-transform: uppercase
 			color: #fff 
@@ -107,7 +120,7 @@
 		width: 50% 
 		min-height: 80vh
 		background: #fff 
-		padding: 60px 100px 100px 94px 
+		padding: 125px 100px 100px 94px 
 		
 .form
 	font-size: 0 
@@ -151,8 +164,8 @@
 .lide
 	position: relative
 	text-align: center
-	min-height: 70vh 
-	padding-top: 60px 
+	min-height: 100vh 
+	padding-top: 60px + 75px
 	h2
 		font-size: 36px 
 		font-weight: 100 
@@ -167,7 +180,7 @@
 		text-transform: uppercase
 		margin-bottom: 35px 
 	.back
-		top: 50px 
+		top: 50px + 75px
 		right: 100px 
 		position: absolute
 
@@ -206,12 +219,13 @@
 .akce
 	background: #212121 
 	position: relative
-	padding-top: 54px 
+	padding-top: 54px + 75px
 	padding-bottom: 100px 
 	padding-left: 100px 
 	padding-right: 100px 
+	min-height: 100vh 
 	.back
-		top: 50px 
+		top: 50px + 75px 
 		right: 100px 
 		position: absolute
 	h2
@@ -294,13 +308,18 @@
 .ledpanel
 	max-width: 970px 
 	margin: 0 auto 
-	padding: 40px 0 100px 0
+	padding: 115px 0 100px 0
+	min-height: 100vh 
+	.back
+		a
+			text-decoration: none
 .smycka
 	position: relative
+	min-height: 100vh 
 	.back
 		position: absolute
 		right: 100px 
-		top: 50px 
+		top: 50px + 75px
 		z-index: 10
 		color: #fff  
 		a
@@ -311,13 +330,14 @@
 				+s(arrowleft) 
 				transform: rotate(0)
 	.smycka__content
-		padding: 53px 550px 100px 93px
+		padding: 125px 550px 100px 93px
 	.smycka__pic
 		position: absolute
 		right: 0
 		top: 0
 		bottom: 0
 		width: 470px    
+		min-height: 100vh 
 		background: url(../img/smycka.png) no-repeat 50% 50%
 		background-size: cover  
 .text
