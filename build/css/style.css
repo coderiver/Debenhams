@@ -291,7 +291,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .rezervace { background: #212121; position: relative; padding: 45px 100px; padding-top: 110px; }
 .rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 10px; }
-.rezervace .back { position: absolute; right: 100px; top: 50px; }
+.rezervace .back { position: absolute; right: 100px; top: 125px; }
 
 .years { text-align: center; font-size: 13px; color: #fff; text-transform: uppercase; margin-bottom: 28px; }
 .years a { color: #888; margin: 0 5px; letter-spacing: 2px; text-decoration: none; }
