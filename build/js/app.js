@@ -74,7 +74,8 @@ $(document).ready(function() {
 	  newvid.play();
 	});
 
-	// firstvid = $('.slick-current').find('video')[0].play();
+	$('.slick-current').find('video')[0].play();
+	$('.js-play').addClass("is-paused");
 
 	$('video').each(function(index, el) {
 		$(this).on('ended', function(event) {
