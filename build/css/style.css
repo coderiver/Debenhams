@@ -207,6 +207,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
 
+.onecol { width: 50%; }
+
 .kontakt { *zoom: 1; position: relative; min-height: 100vh; }
 .kontakt:after { content: " "; display: table; clear: both; }
 .kontakt .back { position: absolute; top: 125px; right: 100px; background: #fff; z-index: 20; padding: 3px 10px; }
@@ -272,6 +274,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .rezervace { min-height: 100vh; padding-top: 110px; }
 
 .ledpanel { max-width: 970px; margin: 0 auto; padding: 115px 0 100px 0; min-height: 100vh; }
+.ledpanel h2 + h3 { width: 50%; }
 .ledpanel .back a { text-decoration: none; }
 
 .smycka { position: relative; min-height: 100vh; }
@@ -287,7 +290,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .text small { display: block; color: #999999; font-size: 12px; }
 .text a { color: #333; text-decoration: underline; }
 .text h3 { font-size: 14px; text-transform: uppercase; color: #999999; margin-bottom: 13px; letter-spacing: 5px; font-weight: normal; }
-.text ul { list-style-type: disc; margin: 1em 2em; }
+.text ul { list-style-type: disc; margin: 1em 2em 1em 17px; }
 .text h2 { font-weight: 100; font-size: 36px; margin-bottom: 26px; color: #171717; text-transform: uppercase; letter-spacing: 5px; }
 
 .rezervace { background: #212121; position: relative; padding: 45px 100px; padding-top: 110px; }
