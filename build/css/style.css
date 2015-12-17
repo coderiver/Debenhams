@@ -207,6 +207,12 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .twocols { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 40px; -moz-column-gap: 40px; column-gap: 40px; }
 
+.kontakt { *zoom: 1; position: relative; }
+.kontakt:after { content: " "; display: table; clear: both; }
+.kontakt .back { position: absolute; top: 50px; right: 100px; background: #fff; z-index: 20; padding: 3px 10px; }
+.kontakt .kontakt__content { float: left; width: 50%; padding: 43px 80px 80px 94px; min-height: 80vh; }
+.kontakt .kontakt__right { float: right; width: 50%; min-height: 80vh; }
+
 .cenik { position: relative; *zoom: 1; }
 .cenik:after { content: " "; display: table; clear: both; }
 .cenik .back { position: absolute; top: 50px; right: 100px; opacity: 1 !important; }
@@ -226,7 +232,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .form input[type=text]:-ms-input-placeholder { color: #999999; }
 .form input[type=text]::placeholder { color: #999999; }
 .form textarea { font-size: 14px; margin-top: 10px; color: #999; padding: 10px 15px; height: 88px; display: block; width: 100%; border: none; margin-bottom: 10px; }
-.form input[type=submit] { border: 2px solid #fff; color: #fff; background: transparent; font-weight: 700; font-size: 14px; color: #fff; text-align: center; width: 50%; padding: 10px 0; }
+.form input[type=submit] { border: 2px solid #fff; color: #fff; background: transparent; font-weight: 700; font-size: 14px; color: #fff; text-align: center; width: 50%; padding: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
 .form input[type=submit]:hover { background: #fff; color: #1fcb73; }
 
 .lide { position: relative; text-align: center; min-height: 70vh; padding-top: 60px; }

@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#fff">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:700,400,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="all" href="css/style.css" >
+	<script src="js/app.js"></script>
+</head>
+<body class="is-inside">
+<!-- BEGIN  out-->
+<div class="out">
+	//=include partials/header1.html 
+	<!-- begin content  -->
+	<div class="content">
+
+		<div class="kontakt">
+			<div class="back"><a href="/"><i></i>zpět</a></div>
+			<div class="kontakt__content">
+				<div class="text">
+					<h2>KONTAKTY</h2>
+					<h3>Provozovatel mediálního panelu LED</h3>
+					<p>Mestra House, s. r. o.<br>
+Václavské náměstí 831/21<br>
+110 00 Praha 1</p>
+       
+					<p>IČ: 271103030 <br>
+DIČ: CZ27103030<br>
+společnost zapsaná v obchodním rejstříku vedeném Městským soudem v Praze<br>
+spisová značka C 96439</p>
+ 
+					<p><a href="mailto:debenhams@mestrahouse.cz">debenhams@mestrahouse.cz</a> <br>
+<strong>+420 221 015 047</strong></p>
+<br><br>
+			<h3>Kontaktní a odpovědná osoba pro provoz mediálního panelu LED </h3>
+			<p>Irena Černohousová<br>
+<a href="mailto:debenhams@mestrahouse.cz">irena.cernohousova@mestrahouse.cz</a><br>
+<strong>725 501 512</strong></p>
+
+					
+				</div>
+			</div>
+			<div class="kontakt__right" id="map">
+				[map]
+			</div>
+
+		</div>
+	</div>
+	<!-- end content -->
+
+	<script>
+			var map;
+			function initMap() {
+				var myLatLng = {lat: 50.082505, lng: 14.426620};
+				var customMapType = new google.maps.StyledMapType([
+						{
+							stylers: [
+								{hue: '#becbcd'},
+								{weight: 1.5}
+							]
+						}
+					], {
+						name: 'Custom Style'
+				});
+				var customMapTypeId = 'custom_style';
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 17,
+					center: myLatLng,
+					// disableDefaultUI: true,
+					zoomControl: true
+					// scrollwheel: false,
+					// draggable: false,
+					// mapTypeControlOptions: {
+					// 	mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+					// }
+				});
+				var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map,
+					icon: 'img/marker.png'
+				});
+				map.mapTypes.set(customMapTypeId, customMapType);
+				map.setMapTypeId(customMapTypeId);
+			}
+		</script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCPLx_osAJ33YNibIjaqX9uH5kbYIlNJVY&callback=initMap" async defer></script>
+	
+
+	//=include partials/footer.html
+</div>
+<!-- END out-->
+</body>
+</html>
