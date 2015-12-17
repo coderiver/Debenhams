@@ -167,7 +167,13 @@ $(document).ready(function() {
 		year = $('.years .is-active').text();
 		month = $('.monthes li a.is-active').parent().index();
 		month = month + 1;
+		if(year=='2015' && month!='12'){
+			month = 12;
+			$('.monthes a').removeClass('is-active');
+			$('.monthes li:last-child a').addClass('is-active');
+		}
 		if(month<10){month = '0'+month;}
+
 		$('.booklist').hide();
 		$('#'+year+''+month).show();
 	}
