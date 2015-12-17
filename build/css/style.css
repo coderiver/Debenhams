@@ -251,6 +251,10 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .person a { color: #000000; text-decoration: underline; font-size: 14px; }
 
 .akce { background: #212121; position: relative; padding-top: 129px; padding-bottom: 100px; padding-left: 100px; padding-right: 100px; min-height: 100vh; }
+.akce.lessitems .akce__next, .akce.lessitems .akce__prev { display: none; }
+.akce.lessitems .akce__slides { text-align: center; background: none; -webkit-box-shadow: none; box-shadow: none; font-size: 0; min-height: 300px; height: auto; }
+.akce.lessitems .akce__item { display: inline-block; width: 300px; vertical-align: top; text-align: left; min-height: 300px; height: auto; padding-bottom: 30px; }
+.akce.lessitems .akce__slider { -webkit-box-shadow: none; box-shadow: none; }
 .akce .back { top: 125px; right: 100px; position: absolute; }
 .akce h2 { text-align: center; font-weight: 100; color: #fff; font-size: 36px; margin-bottom: 43px; }
 .akce__info { text-align: center; margin-top: 40px; }
