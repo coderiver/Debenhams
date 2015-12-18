@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
+
 	var i = null;
+	i = setTimeout(function () {
+	    $("body").addClass('is-hidemenu');  
+	}, 3000);
 	$(".top").mousemove(function() {
 	    clearTimeout(i);
 	    $("body").removeClass('is-hidemenu');  

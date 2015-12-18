@@ -298,7 +298,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .text li { -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
 .text h2 { font-weight: 100; font-size: 36px; margin-bottom: 26px; color: #171717; text-transform: uppercase; letter-spacing: 5px; }
 
-.rezervace { background: #212121; position: relative; padding: 45px 100px; padding-top: 110px; }
+.rezervace { background: #212121; position: relative; padding: 45px 100px; padding-top: 110px; padding-bottom: 80px; }
 .rezervace h2 { font-size: 36px; font-weight: 100; text-transform: uppercase; letter-spacing: 3px; text-align: center; color: #fff; margin-bottom: 10px; }
 .rezervace .back { position: absolute; right: 100px; top: 125px; }
 
