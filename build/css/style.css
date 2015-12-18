@@ -171,8 +171,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .logos h3 { margin-top: 56px; }
 .logos a { display: inline-block; }
 .logos a:hover { -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-.logos ul { font-size: 0; }
-.logos li { display: inline-block; margin: 0 30px 30px 0; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
+.logos ul { font-size: 0; max-width: 1202px; margin: 0 auto; }
+.logos li { display: inline-block; margin: 0 15px 30px 15px; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
 
 .footer { background: #161616; height: 42px; line-height: 40px; position: relative; }
 .footer__copy { font-size: 12px; color: #888888; float: left; margin-left: 90px; }
@@ -315,7 +315,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .booklist { font-size: 0; display: none; }
 
-.book { display: inline-block; width: 16.6%; height: 87px; padding: 12px 0 0 16px; background: #fff; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); }
+.book { display: inline-block; width: 16.6%; height: 87px; padding: 12px 0 0 16px; background: #fff; vertical-align: top; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); }
 .book.is-pre { background: #e6e6e6; }
 .book.is-booked { background: #eeca39; }
 .book__num { font-size: 12px; text-transform: uppercase; color: #8c8c8c; letter-spacing: 2px; margin-bottom: 10px; }
