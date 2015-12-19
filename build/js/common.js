@@ -60,7 +60,10 @@ $(document).ready(function() {
 	  $("[data-slick-index='"+nextSlide+"']").find('.top__video').html(videos[vv]);
 	  newvid = $("[data-slick-index='"+nextSlide+"']").find('video')[0];
 	  $('.js-play').addClass('is-paused');
-	  newvid.play();
+	  
+	  setTimeout(function(){
+	  	newvid.play();
+	  },100)
 	});
 	if($('.slick-current').find('video').size()>0){
 		$('.slick-current').find('video')[0].play();
