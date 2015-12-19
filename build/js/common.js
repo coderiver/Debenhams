@@ -60,9 +60,13 @@ $(document).ready(function() {
 	  $("[data-slick-index='"+nextSlide+"']").find('.top__video').html(videos[vv]);
 	  newvid = $("[data-slick-index='"+nextSlide+"']").find('video')[0];
 	  $('.js-play').addClass('is-paused');
-	  
+	  $(newvid).on('ended', function(event) {
+			stopall();
+			$(".js-slider").slick('slickNext');
+		});
 	  setTimeout(function(){
 	  	newvid.play();
+	  	
 	  },100)
 	});
 	if($('.slick-current').find('video').size()>0){
