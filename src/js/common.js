@@ -3,17 +3,17 @@ $(document).ready(function() {
 
 	var i = null;
 	i = setTimeout(function () {
-	    $("body").addClass('is-hidemenu');  
+	    $("body").addClass('is-hidemenu');
 	}, 3000);
 	$(".top").mousemove(function() {
 	    clearTimeout(i);
-	    $("body").removeClass('is-hidemenu');  
+	    $("body").removeClass('is-hidemenu');
 	    i = setTimeout(function () {
-	        $("body").addClass('is-hidemenu');  
+	        $("body").addClass('is-hidemenu');
 	    }, 3000);
 	}).mouseleave(function() {
 	    // clearTimeout(i);
-	    $("body").removeClass('is-hidemenu');  
+	    $("body").removeClass('is-hidemenu');
 	});
 
 	$(".js-gallery").slick({
@@ -42,8 +42,8 @@ $(document).ready(function() {
 	else{
 		$('.akce').addClass('lessitems');
 	}
-	
-	
+
+
 	$(".js-slider").slick({
 		infinite: true,
 		slidesToShow: 1,
@@ -66,14 +66,14 @@ $(document).ready(function() {
 		});
 	  setTimeout(function(){
 	  	newvid.play();
-	  	
+
 	  },100)
 	});
 	if($('.slick-current').find('video').size()>0){
 		$('.slick-current').find('video')[0].play();
 		$('.js-play').addClass("is-paused");
 	}
-	
+
 
 	$('video').each(function(index, el) {
 		$(this).on('ended', function(event) {
@@ -104,7 +104,7 @@ $(document).ready(function() {
 	});
 
 	if($('body').hasClass("is-home")){
-		if(window.location.hash) {
+		if(window.location.hash=='#pages') {
 		     var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
 		     		target = $('.header-placeholder');
 		     		stopall();
@@ -141,7 +141,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-	
+
 	$('.events__more,.events__less').click(function(event) {
 		$('.events').toggleClass("is-wide").find('.is-hidden').toggle();
 		$('.gallery__pics').toggle();
@@ -161,7 +161,7 @@ $(document).ready(function() {
 				arrows: true
 			});
 
-		
+
 		$('.popup__slide').height($(window).height()-190);
 
 		return false;
