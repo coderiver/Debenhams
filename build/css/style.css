@@ -27,6 +27,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-x:before, .popup .popup__close:before, .popup .popup__next:before, .popup .popup__prev:before { content: ""; }
 
+.icon-menu:before { content: ""; }
+
 .icon-next:before, .player .player__next:before { content: ""; }
 
 .icon-next1:before, .gallery .gallery__next:before, .popup .popup__next:before { content: ""; }
@@ -75,7 +77,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .top { height: 100vh; width: 100%; position: relative; overflow: hidden; }
 .top .top__inner { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .top .top__slide { width: 100%; height: 100vh; position: relative; }
-.top .top__video { width: 100%; position: absolute; bottom: 75px; bottom: 0; left: 0; right: 0; top: 0; }
+.top .top__video { width: 100%; position: absolute; bottom: 75px; bottom: 0; left: 0; right: 0; top: 0; background-size: cover; }
 .top .top__video video { position: absolute; left: 0; top: 0; min-width: 100%; width: 100%; object-fit: contain; }
 
 .header-placeholder { background: #212121; height: 75px; }
@@ -110,6 +112,14 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .header__info span, .header__info a { text-decoration: none; color: #fff; letter-spacing: 2px; }
 .header__info a { font-size: 13px; }
 .header__logo { position: absolute; top: 17px; background-image: url("../img/icons.png"); width: 200px; height: 37px; background-position: 0px 0px; left: 95px; }
+.header__burger { display: none; }
+.header__moblang { display: none; }
+.header__moblang ul { display: none; }
+.header__moblangactive { height: 50px; line-height: 50px; }
+.header__moblang.is-active .header__moblangactive { background: rgba(0, 0, 0, 0.9); }
+.header__moblang.is-active ul { display: block; position: absolute; left: 0; top: 50px; right: 0; font-size: 12px; }
+.header__moblang.is-active ul li { height: 50px; line-height: 50px; background: rgba(0, 0, 0, 0.9); }
+.header__moblang.is-active ul li a { display: block; height: 50px; line-height: 50px; text-align: center; text-decoration: none; color: #fff; }
 
 .pages__nav { overflow: hidden; }
 .pages__nav .page { height: 250px; width: 25%; float: left; position: relative; cursor: pointer; }
@@ -322,6 +332,36 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .book__text { font-size: 14px; color: #171717; text-transform: uppercase; letter-spacing: 1px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 1040px){
+ .player{ margin-left: 0; right: 20px; left: auto; }
+ .is-hidemenu .header{ opacity: 1; }
+ .header__lang{ right: 30px; }
+ .header__fb{ display: none; }
+ .header__down{ display: none; }
+ .header__info{ right: 100px; left: auto; margin-left: 0; }
+ .header__logo{ left: 30px; } }
+@media only screen and (max-width: 840px){
+ .footer{ height: auto; padding: 20px 10px; line-height: 1.3; text-align: center; }
+ .footer__copy{ margin: 0; float: none; margin-bottom: 15px; }
+ .footer__info{ margin: 0; float: none; width: auto; position: static; }
+ .footer__dev{ margin: 0; float: none; width: auto; position: static; padding: 0; text-align: center; margin-top: 15px; } }
+@media only screen and (max-width: 800px){
+ .top .top__video video{ display: none; } }
+@media only screen and (max-width: 790px){
+ .header-placeholder{ display: none; }
+ .player{ display: none; }
+ .header{ bottom: auto; top: 0; position: fixed; }
+ .header__info{ display: none; }
+ .header__logo{ -webkit-transform: scale(0.6); -ms-transform: scale(0.6); transform: scale(0.6); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; top: 12px; }
+ .header__burger{ display: block; position: absolute; right: 15px; top: 14px; color: #fff; }
+ .header__burger i{ font-size: 18px; }
+ .header__moblang{ display: block; position: absolute; right: 60px; height: 50px; width: 55px; text-align: center; font-style: 12px; color: #fff; } }
+@media only screen and (max-width: 600px){
+ .header{ height: 50px; overflow: visible; }
+ .header__lang{ display: none; } }
+@media only screen and (max-width: 500px){
+ .footer__info b{ display: none; }
+ .footer__info span, .footer__info a{ display: block; } }
 
 
 

@@ -201,4 +201,8 @@ $(document).ready(function() {
 		loadbooklist();
 	});
 
+	$('.header__moblangactive').click(function(event) {
+		$('.header__moblang').toggleClass('is-active');
+	});
+
 });

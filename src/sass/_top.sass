@@ -8,19 +8,20 @@
 		left: 0
 		top: 0
 		width: 100%
-		height: 100% 
+		height: 100%
 	.top__slide
 		width: 100%
-		height: 100vh  
+		height: 100vh
 		position: relative
 	.top__video
 		width: 100%
 		position: absolute
-		bottom: 75px 
-		bottom: 0 
+		bottom: 75px
+		bottom: 0
 		left: 0
 		right: 0
-		top: 0   
+		top: 0
+		background-size: cover
 		video
 			position: absolute
 			left: 0
@@ -28,28 +29,38 @@
 			min-width: 100%
 			// min-height: 100%
 			width: 100%
-			// height: 100%  
+			// height: 100%
+			+r(800)
+				display: none
 			object-fit: contain
 .header-placeholder
-	background: #212121 
-	height: 75px 
+	background: #212121
+	height: 75px
+	+r(790)
+		display: none
 .player
 	position: absolute
 	left: 50%
-	top: 10px  
-	width: 200px 
+	top: 10px
+	width: 200px
 	margin-left: -100px
 	text-align: center
 	transition: all .2s linear
+	+r(1040)
+		margin-left: 0
+		right: 20px
+		left: auto
+	+r(790)
+		display: none
 	.player__next,.player__prev
-		color: #b1b1b1 
-		font-size: 20px 
+		color: #b1b1b1
+		font-size: 20px
 		cursor: pointer
 		@extend %icon
 		display: inline-block
 		vertical-align: middle
 		&:hover
-			color: #fff 
+			color: #fff
 	.player__next
 		@extend .icon-next
 	.player__prev
@@ -59,7 +70,7 @@
 		+s(play)
 		cursor: pointer
 		vertical-align: middle
-		margin: 0 38px 
+		margin: 0 38px
 		opacity: .7
 		&:hover
 			opacity: 1
@@ -67,104 +78,181 @@
 			+s(pause)
 .header
 	position: absolute
-	bottom: 0 
-	height: 75px 
+	bottom: 0
+	height: 75px
 	overflow: hidden
-	background: rgba(#000,.75) 
-	width: 100% 
-	left: 0 
-	z-index: 200 
+	background: rgba(#000,.75)
+	width: 100%
+	left: 0
+	z-index: 200
 	transition: opacity .2s linear
-	opacity: 1 
+	opacity: 1
+	+r(790)
+		bottom: auto
+		top: 0
+		position: fixed
+	+r(600)
+		height: 50px
+		overflow: visible
 	.is-hidemenu &
-		opacity: 0 
+		opacity: 0
+		+r(1040)
+			opacity: 1
 	&.is-header
-		top: 0 
+		top: 0
 		position: fixed
 		bottom: auto
 		.is-hidemenu &
-			opacity: 1 !important 
+			opacity: 1 !important
 		.header__down,.player
-			top: -75px 
+			top: -75px
 		.header__info
 			top: 29px
 		.header__fb
-			top: 19px 
+			top: 19px
 		.header__lang
-			top: 30px 
+			top: 30px
 	&__lang
 		position: absolute
 		text-align: right
 		top: 30px + 75px
-		right: 194px 
+		right: 194px
 		transition: all .2s linear
+		+r(1040)
+			right: 30px
+		+r(600)
+			display: none
 		a
 			text-decoration: none
-			color: #888888 
-			font-size: 12px 
-			margin-left: 20px 
+			color: #888888
+			font-size: 12px
+			margin-left: 20px
 			text-transform: uppercase
 			&:hover,&.is-active
-				color: #fff 
+				color: #fff
 	&__fb
 		position: absolute
 		top: 19px + 75px
-		right: 96px 
+		right: 96px
 		display: inline-block
 		text-decoration: none
-		+s(fb) 
+		+s(fb)
 		transition: top .2s linear
+		+r(1040)
+			display: none
 		&:hover
 			+sp(fb_h)
 	&__down
 		position: absolute
 		right: 0
 		top: 0
-		text-align: center 
-		width: 270px  
-		height: 75px 
+		text-align: center
+		width: 270px
+		height: 75px
 		cursor: pointer
-		background: #ffffff 
+		background: #ffffff
 		line-height: 75px
-		font-size: 11px  
-		letter-spacing: 2px 
-		color: #050505 
+		font-size: 11px
+		letter-spacing: 2px
+		color: #050505
 		text-transform: uppercase
 		transition: all .2s linear
+		+r(1040)
+			display: none
 		&:hover
-			color: #fff 
-			background: #151515 
+			color: #fff
+			background: #151515
 			i
 				+sp(arrowdown_h)
 		i
 			+s(arrowdown)
 			display: inline-block
 			position: relative
-			top: 20px 
-			margin-left: 10px 
+			top: 20px
+			margin-left: 10px
 	&__info
 		position: absolute
 		left: 50%
-		top: 29px + 75px 
+		top: 29px + 75px
 		text-align: center
-		width: 500px 
-		margin-left: -250px 
-		font-size: 12px 
-		color: #555555 
+		width: 500px
+		margin-left: -250px
+		font-size: 12px
+		color: #555555
 		transition: all .2s linear
+		+r(1040)
+			right: 100px
+			left: auto
+			margin-left: 0
+		+r(790)
+			display: none
 		b
 			margin: 0 20px
-			font-weight: normal 
+			font-weight: normal
 		span
 			text-transform: uppercase
 		span,a
 			text-decoration: none
-			color: #fff 
-			letter-spacing: 2px 
+			color: #fff
+			letter-spacing: 2px
 		a
-			font-size: 13px 
+			font-size: 13px
 	&__logo
 		position: absolute
-		top: 17px 
+		top: 17px
 		+s(logo)
-		left: 95px 
+		left: 95px
+
+		+r(1040)
+			left: 30px
+		+r(790)
+			transform: scale(.6)
+			transform-origin: 0 0
+			top: 12px
+	&__burger
+		display: none
+		+r(790)
+			display: block
+			position: absolute
+			right: 15px
+			top: 14px
+			color: #fff
+			i
+				font-size: 18px
+	&__moblang
+		display: none
+		ul
+			display: none
+		&active
+			height: 50px
+			line-height: 50px
+		&.is-active
+			.header__moblangactive
+				background: rgba(#000,.9)
+			ul
+				display: block
+				position: absolute
+				left: 0
+				top: 50px
+				right: 0
+				font-size: 12px
+				li
+					height: 50px
+					line-height: 50px
+					background: rgba(#000,.9)
+					a
+						display: block
+						height: 50px
+						line-height: 50px
+						text-align: center
+						text-decoration: none
+						color: #fff
+		+r(790)
+			display: block
+			position: absolute
+			right: 60px
+			height: 50px
+			width: 55px
+			text-align: center
+			font-style: 12px
+			color: #fff

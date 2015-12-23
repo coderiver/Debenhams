@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="19px" viewBox="0 0 40 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M0,2 L0,0 L40,0 L40,2 L0,2 L0,2 Z M0,10 L0,8 L40,8 L40,10 L0,10 L0,10 Z M0,19 L0,17 L40,17 L40,19 L0,19 L0,19 Z" id="menu" fill="#F2F2F2" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
