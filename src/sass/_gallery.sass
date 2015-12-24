@@ -12,6 +12,11 @@
 		top: 0
 		z-index: 20
 		background: #fff
+		+r(800)
+			width: auto
+			position: static
+			float: none
+			padding: 30px
 		&.is-wide
 			width: 100%
 		h2
@@ -63,9 +68,19 @@
 		height: 412px
 		width: 50%
 		position: relative
+		+r(800)
+			width: auto
+			position: relative
+			float: none
+			height: auto
+			height: 200px
 	.gallery__slide
 		height: 412px
 		background-size: cover
+		+r(800)
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: 50% 50%
 		a
 			position: absolute
 			left: 0

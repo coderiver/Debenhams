@@ -228,5 +228,8 @@ $(document).ready(function() {
 	$('.header__moblangactive').click(function(event) {
 		$('.header__moblang').toggleClass('is-active');
 	});
+	$('.header__burger,.mobileover__close').click(function(event) {
+		$('.mobileover').toggle();
+	});
 
 });

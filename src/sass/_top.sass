@@ -3,6 +3,8 @@
 	width: 100%
 	position: relative
 	overflow: hidden
+	+r(600)
+		height: 300px
 	.top__inner
 		position: absolute
 		left: 0
@@ -13,6 +15,8 @@
 		width: 100%
 		height: 100vh
 		position: relative
+		+r(600)
+			height: 300px
 	.top__video
 		width: 100%
 		position: absolute
@@ -21,7 +25,9 @@
 		left: 0
 		right: 0
 		top: 0
-		background-size: cover
+		background-size: contain !important
+		+rm(800)
+			background-image: none !important
 		video
 			position: absolute
 			left: 0
@@ -91,7 +97,7 @@
 		bottom: auto
 		top: 0
 		position: fixed
-	+r(600)
+	+r(790)
 		height: 50px
 		overflow: visible
 	.is-hidemenu &
@@ -120,7 +126,7 @@
 		transition: all .2s linear
 		+r(1040)
 			right: 30px
-		+r(600)
+		+r(790)
 			display: none
 		a
 			text-decoration: none
@@ -202,9 +208,8 @@
 		top: 17px
 		+s(logo)
 		left: 95px
-
 		+r(1040)
-			left: 30px
+			left: 15px
 		+r(790)
 			transform: scale(.6)
 			transform-origin: 0 0
@@ -226,9 +231,21 @@
 		&active
 			height: 50px
 			line-height: 50px
+			text-align: left
+			padding-left: 15px
+			i
+				+s(arr)
+				display: inline-block
+				margin-left: 5px
+				position: absolute
+				right: 8px
+				top: 50%
+				margin-top: -5px
 		&.is-active
 			.header__moblangactive
-				background: rgba(#000,.9)
+				background-color: rgba(#000,.9)
+				i
+					transform: rotate(180deg)
 			ul
 				display: block
 				position: absolute
@@ -244,7 +261,8 @@
 						display: block
 						height: 50px
 						line-height: 50px
-						text-align: center
+						padding-left: 15px
+						text-align: left
 						text-decoration: none
 						color: #fff
 		+r(790)
@@ -252,7 +270,72 @@
 			position: absolute
 			right: 60px
 			height: 50px
-			width: 55px
-			text-align: center
+			width: 60px
+			text-align: left
+
 			font-style: 12px
 			color: #fff
+.mobileover
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: rgba(#000,.9)
+	text-align: center
+	z-index: 1000
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		font-size: 20px
+		color: #fff
+	&__bottom
+		position: absolute
+		bottom: 20px
+		left: 0
+		right: 0
+		text-align: center
+		font-style: 12px
+		color: #888888
+	&__logo
+		position: absolute
+		+s(logo)
+		transform: scale(.6)
+		transform-origin: 0 0
+		top: 12px
+		left: 15px
+	&__info
+		position: absolute
+		top: 50%
+		margin-top: -20px
+		text-align: center
+		left: 0
+		right: 0
+		color: #fff
+		font-size: 20px
+		b
+			display: none
+		span,a
+			display: block
+			text-decoration: none
+			color: #fff
+			margin-bottom: 10px
+	&__fb
+		+s(fb)
+		display: inline-block !important
+		&:hover
+			+sp(fb_h)
+	&__copy
+		margin-bottom: 10px
+	&__dev
+
+		a
+			+s(creativin)
+			display: inline-block
+			+hide-text
+			vertical-align: middle
+			margin-left: 10px
+			position: relative
+			top: -2px
