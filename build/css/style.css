@@ -166,7 +166,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .pages__nav .page_8 i { background-image: url("../img/icons.png"); width: 60px; height: 61px; background-position: -204px -67px; }
 .pages__nav .page_8:hover { background: #fa580a; }
 
-.gallery { overflow: hidden; min-height: 412px; background: #fff; position: relative; }
+.gallery { overflow: hidden; min-height: 412px; background: #fff; position: relative; clear: both; }
 .gallery .events { float: left; width: 50%; padding: 61px 0 20px 93px; position: absolute; left: 0; top: 0; z-index: 20; background: #fff; }
 .gallery .events.is-wide { width: 100%; }
 .gallery .events h2 { font-size: 36px; font-weight: 100; letter-spacing: 5px; margin-bottom: 30px; }
@@ -242,8 +242,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .cenik { position: relative; min-height: 100vh; overflow: hidden; }
 .cenik:before { width: 50%; z-index: -1; position: absolute; bottom: 0; top: 0; height: 100%; right: 0; background: #1fcb73; content: " "; }
-.cenik .back { position: absolute; top: 125px; right: 100px; opacity: 1 !important; }
-.cenik .back:hover { opacity: 0.5 !important; }
+.cenik .back.back_white { position: absolute; top: 125px; right: 100px; opacity: 1 !important; }
+.cenik .back.back_white:hover { opacity: 0.5 !important; }
 .cenik .cenik__right { width: 50%; background: #1fcb73; float: right; min-height: 80vh; padding: 200px 80px 80px 94px; }
 .cenik .cenik__right h3 { text-transform: uppercase; color: #fff; font-size: 14px; letter-spacing: 3px; font-weight: normal; margin-bottom: 5px; }
 .cenik .cenik__right p { color: #000; font-size: 14px; margin-bottom: 34px; }
@@ -354,6 +354,9 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .header__down{ display: none; }
  .header__info{ right: 100px; left: auto; margin-left: 0; }
  .header__logo{ left: 15px; } }
+@media only screen and (max-width: 970px){
+ .rezervace{ padding: 80px 30px 30px 30px; }
+ .rezervace .back{ position: static; float: none; } }
 @media only screen and (max-width: 840px){
  .footer{ height: auto; padding: 20px 10px; line-height: 1.3; text-align: center; }
  .footer__copy{ margin: 0; float: none; margin-bottom: 15px; }
@@ -365,7 +368,41 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .top .top__video video{ display: none; }
  .gallery .events{ width: auto; position: static; float: none; padding: 30px; }
  .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; }
- .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; } }
+ .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; }
+ .is-inside .footer{ margin-top: 0; }
+ .back{ display: block; text-align: left; float: none; margin-bottom: 10px; }
+ .twocols{ -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+ .kontakt{ min-height: 0; padding: 80px 30px 30px 30px; }
+ .kontakt .back{ position: static; padding: 0; }
+ .kontakt .kontakt__content{ padding: 0; width: auto; float: none; min-height: 0; }
+ .kontakt .kontakt__right{ float: none; width: auto; min-height: 300px; }
+ .cenik{ min-height: 0; }
+ .cenik:before{ display: none; }
+ .cenik .back.back_white{ position: absolute; top: 74px; right: auto; left: 30px; }
+ .cenik .back.back_white a{ color: #000; }
+ .cenik .back.back_white i{ background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+ .cenik .cenik__right{ padding: 30px; float: none; width: auto; min-height: 0; }
+ .cenik .cenik__content{ padding: 100px 30px 30px 30px; float: none; width: auto; min-height: 0; }
+ .lide{ padding: 80px 30px 30px 30px; min-height: 0; }
+ .lide h2{ font-style: 24px; }
+ .lide .back{ position: static; }
+ .akce{ min-height: 0; padding: 80px 30px 30px 30px; }
+ .akce.lessitems .akce__item{ width: auto; }
+ .akce .back{ position: static; }
+ .rezervace{ min-height: 0; padding-top: 80px; }
+ .ledpanel{ min-height: 0; padding: 80px 30px 30px 30px; }
+ .ledpanel h2 + h3{ width: auto; }
+ .smycka{ min-height: auto; padding: 80px 30px 30px 30px; }
+ .smycka .back{ position: static; }
+ .smycka .back a{ color: #000; }
+ .smycka .back a i{ background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+ .smycka .smycka__content{ padding: 0; }
+ .smycka .smycka__pic{ display: none; }
+ .monthes{ height: auto; margin-bottom: 15px; }
+ .monthes ul{ font-size: 14px; line-height: 1.3; text-align: center !important; -moz-text-align-last: center; text-align-last: center; }
+ .monthes ul::after{ display: none; }
+ .monthes li a{ padding: 5px; }
+ .book{ width: 20%; } }
 @media only screen and (max-width: 790px){
  .header-placeholder{ display: none; }
  .player{ display: none; }
@@ -382,10 +419,14 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .top .top__slide{ height: 300px; }
  .pages__nav .page{ width: 50%; }
  .pages__nav .page.page_1, .pages__nav .page.page_3, .pages__nav .page.page_6, .pages__nav .page.page_8{ -webkit-box-shadow: none; box-shadow: none; }
- .pages__nav .page.page_1, .pages__nav .page.page_4, .pages__nav .page.page_5, .pages__nav .page.page_8{ -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); z-index: 20; } }
+ .pages__nav .page.page_1, .pages__nav .page.page_4, .pages__nav .page.page_5, .pages__nav .page.page_8{ -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); z-index: 20; }
+ .logos h2, .logos h3{ font-size: 24px; }
+ .book{ width: 33%; } }
 @media only screen and (max-width: 500px){
  .footer__info b{ display: none; }
  .footer__info span, .footer__info a{ display: block; } }
+@media only screen and (max-width: 480px){
+ .book{ width: 50%; } }
 
 
 
