@@ -101,7 +101,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .header__lang a { text-decoration: none; color: #888888; font-size: 12px; margin-left: 20px; text-transform: uppercase; }
 .header__lang a:hover, .header__lang a.is-active { color: #fff; }
 .header__fb { position: absolute; top: 94px; right: 96px; display: inline-block; text-decoration: none; background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -204px -132px; -webkit-transition: top 0.2s linear; transition: top 0.2s linear; }
-.header__fb:hover { background-position: -155px -41px; }
+.header__fb:visited { background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -204px -132px; }
+.header__fb:hover { background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -155px -41px; }
 .header__down { position: absolute; right: 0; top: 0; text-align: center; width: 270px; height: 75px; cursor: pointer; background: #ffffff; line-height: 75px; font-size: 11px; letter-spacing: 2px; color: #050505; text-transform: uppercase; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .header__down:hover { color: #fff; background: #151515; }
 .header__down:hover i { background-position: -271px 0px; }
