@@ -7,6 +7,10 @@
 	z-index: 2000
 	background: rgba(#000,.85)
 	display: none
+	+r(800)
+		width: 0
+		height: 0
+		overflow: hidden
 	.popup__close
 		@extend %icon
 		@extend .icon-x

@@ -31,6 +31,8 @@ $(document).ready(function() {
 		autoplay: true,
 		autoplaySpeed: 3000
 	});
+
+
 	if($('.akce__item').size()>2){
 		$(".js-akce").slick({
 			infinite: true,
@@ -47,16 +49,34 @@ $(document).ready(function() {
 		$('.akce').addClass('lessitems');
 	}
 
+	if($(window).width()>800){
+		$(".js-slider").slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			slide: '.top__slide',
+			nextArrow: $('.player__next'),
+			prevArrow: $('.player__prev'),
+			arrows: true
+		});
+	}
+	else{
+		$(".js-slider").slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			slide: '.top__slide',
+			nextArrow: $('.player__next'),
+			prevArrow: $('.player__prev'),
+			arrows: true,
+			autoplay: true,
+		  autoplaySpeed: 3000
+		});
+	}
 
-	$(".js-slider").slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		slide: '.top__slide',
-		nextArrow: $('.player__next'),
-		prevArrow: $('.player__prev'),
-		arrows: true
-	});
+
+
+
 	$('.js-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 	  stopall();
 	  vv = $("[data-slick-index='"+nextSlide+"']").find('.top__video').data('video');

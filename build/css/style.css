@@ -77,7 +77,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .top { height: 100vh; width: 100%; position: relative; overflow: hidden; }
 .top .top__inner { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 .top .top__slide { width: 100%; height: 100vh; position: relative; }
-.top .top__video { width: 100%; position: absolute; bottom: 75px; bottom: 0; left: 0; right: 0; top: 0; background-size: contain !important; }
+.top .top__video { width: 100%; position: absolute; bottom: 75px; bottom: 0; left: 0; right: 0; top: 0; background-size: cover !important; }
 .top .top__video video { position: absolute; left: 0; top: 0; min-width: 100%; width: 100%; object-fit: contain; }
 
 .header-placeholder { background: #212121; height: 75px; }
@@ -127,7 +127,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .mobileover__close { position: absolute; right: 15px; top: 15px; font-size: 20px; color: #fff; }
 .mobileover__bottom { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; font-style: 12px; color: #888888; }
 .mobileover__logo { position: absolute; background-image: url("../img/icons.png"); width: 200px; height: 37px; background-position: 0px 0px; -webkit-transform: scale(0.6); -ms-transform: scale(0.6); transform: scale(0.6); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; top: 12px; left: 15px; }
-.mobileover__info { position: absolute; top: 50%; margin-top: -20px; text-align: center; left: 0; right: 0; color: #fff; font-size: 20px; }
+.mobileover__info { position: absolute; top: 50%; margin-top: -70px; text-align: center; left: 0; right: 0; color: #fff; font-size: 20px; }
 .mobileover__info b { display: none; }
 .mobileover__info span, .mobileover__info a { display: block; text-decoration: none; color: #fff; margin-bottom: 10px; }
 .mobileover__fb { background-image: url("../img/icons.png"); width: 34px; height: 34px; background-position: -204px -132px; display: inline-block !important; }
@@ -368,10 +368,13 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .top .top__video video{ display: none; }
  .gallery .events{ width: auto; position: static; float: none; padding: 30px; }
  .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; }
- .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; }
+ .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; height: 200px; }
+ .gallery .gallery__next, .gallery .gallery__prev{ text-shadow: 1px 0px 0 #000; top: 50%; margin-top: -20px; }
+ .popup{ width: 0; height: 0; overflow: hidden; }
  .is-inside .footer{ margin-top: 0; }
- .back{ display: block; text-align: left; float: none; margin-bottom: 10px; }
+ .back{ display: block; text-align: left; float: none; margin-bottom: 10px; text-align: right; }
  .twocols{ -webkit-column-count: 1; -moz-column-count: 1; column-count: 1; }
+ .onecol{ width: auto; }
  .kontakt{ min-height: 0; padding: 80px 30px 30px 30px; }
  .kontakt .back{ position: static; padding: 0; }
  .kontakt .kontakt__content{ padding: 0; width: auto; float: none; min-height: 0; }
@@ -397,9 +400,10 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .smycka .back a{ color: #000; }
  .smycka .back a i{ background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
  .smycka .smycka__content{ padding: 0; }
- .smycka .smycka__pic{ display: none; }
+ .smycka .smycka__pic{ display: block; height: 400px; background-size: contain; width: auto; position: static; min-height: 0; }
+ .text ul{ width: auto; display: block; }
  .monthes{ height: auto; margin-bottom: 15px; }
- .monthes ul{ font-size: 14px; line-height: 1.3; text-align: center !important; -moz-text-align-last: center; text-align-last: center; }
+ .monthes ul{ font-size: 14px; line-height: 1.3; text-align: center !important; -moz-text-align-last: center; text-align-last: center; white-space: nowrap; overflow: auto; }
  .monthes ul::after{ display: none; }
  .monthes li a{ padding: 5px; }
  .book{ width: 20%; } }
@@ -415,12 +419,11 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .header__burger i{ font-size: 18px; }
  .header__moblang{ display: block; position: absolute; right: 60px; height: 50px; width: 60px; text-align: left; font-style: 12px; color: #fff; } }
 @media only screen and (max-width: 600px){
- .top{ height: 300px; }
- .top .top__slide{ height: 300px; }
  .pages__nav .page{ width: 50%; }
  .pages__nav .page.page_1, .pages__nav .page.page_3, .pages__nav .page.page_6, .pages__nav .page.page_8{ -webkit-box-shadow: none; box-shadow: none; }
  .pages__nav .page.page_1, .pages__nav .page.page_4, .pages__nav .page.page_5, .pages__nav .page.page_8{ -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); z-index: 20; }
  .logos h2, .logos h3{ font-size: 24px; }
+ .footer{ display: none; }
  .book{ width: 33%; } }
 @media only screen and (max-width: 500px){
  .footer__info b{ display: none; }

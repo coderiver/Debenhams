@@ -13,6 +13,7 @@
 		text-align: left
 		float: none
 		margin-bottom: 10px
+		text-align: right
 	&:hover
 		opacity: .5
 	a
@@ -44,6 +45,8 @@
 		column-count: 1
 .onecol
 	width: 50%
+	+r(800)
+		width: auto
 
 
 .kontakt
@@ -406,6 +409,7 @@
 .smycka
 	position: relative
 	min-height: 100vh
+
 	+r(800)
 		min-height: auto
 		padding: 80px 30px 30px 30px
@@ -443,7 +447,12 @@
 		background: url(../img/smycka.png) no-repeat 50% 50%
 		background-size: cover
 		+r(800)
-			display: none
+			display: block
+			height: 400px
+			background-size: contain
+			width: auto
+			position: static
+			min-height: 0
 .text
 	font-size: 14px
 	font-size: 14px
@@ -480,6 +489,9 @@
 		break-inside: avoid
 		display: inline-block
 		width: 100%
+		+r(800)
+			width: auto
+			display: block
 	li
 		-webkit-column-break-inside: avoid
 		page-break-inside: avoid
