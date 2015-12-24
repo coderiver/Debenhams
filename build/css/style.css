@@ -367,7 +367,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 @media only screen and (max-width: 800px){
  .top .top__video video{ display: none; }
  .gallery .events{ width: auto; position: static; float: none; padding: 30px; }
- .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; }
+ .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; margin-bottom: 30px; }
  .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; height: 200px; }
  .gallery .gallery__next, .gallery .gallery__prev{ text-shadow: 1px 0px 0 #000; top: 50%; margin-top: -20px; }
  .popup{ width: 0; height: 0; overflow: hidden; }
