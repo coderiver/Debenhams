@@ -29,12 +29,16 @@ $(document).ready(function() {
 	i = setTimeout(function () {
 	    $("body").addClass('is-hidemenu');
 	}, 3000);
-	$(".top").mousemove(function() {
+	$(".top").mousemove(function(event) {
 	    clearTimeout(i);
 	    $("body").removeClass('is-hidemenu');
-	    i = setTimeout(function () {
-	        $("body").addClass('is-hidemenu');
-	    }, 3000);
+			// console.log($(window).height() - event.pageY);
+			if($('.top').height() - event.pageY >100){
+				i = setTimeout(function () {
+		        $("body").addClass('is-hidemenu');
+		    }, 3000);
+			}
+
 	}).mouseleave(function() {
 	    // clearTimeout(i);
 	    $("body").removeClass('is-hidemenu');
