@@ -384,13 +384,11 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .cenik{ min-height: 0; }
  .cenik:before{ display: none; }
  .cenik .back.back_white{ position: absolute; top: 74px; right: auto; left: 30px; }
- .cenik .back.back_white a{ color: #000; }
- .cenik .back.back_white i{ background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
  .cenik .cenik__right{ padding: 30px; float: none; width: auto; min-height: 0; }
- .cenik .cenik__content{ padding: 100px 30px 30px 30px; float: none; width: auto; min-height: 0; }
+ .cenik .cenik__content{ padding: 70px 30px 30px 30px; float: none; width: auto; min-height: 0; }
  .lide{ padding: 80px 30px 30px 30px; min-height: 0; }
- .lide h2{ font-style: 24px; }
- .lide .back{ position: static; }
+ .lide h2{ font-size: 24px; }
+ .lide .back{ position: static; float: right; }
  .akce{ min-height: 0; padding: 80px 30px 30px 30px; }
  .akce.lessitems .akce__item{ width: auto; }
  .akce .back{ position: static; }
@@ -426,8 +424,15 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .pages__nav .page.page_1, .pages__nav .page.page_4, .pages__nav .page.page_5, .pages__nav .page.page_8{ -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); box-shadow: 0 3px 20px rgba(0, 0, 0, 0.91); z-index: 20; }
  .logos h2, .logos h3{ font-size: 24px; }
  .footer{ display: none; }
+ .cenik .back.back_white{ right: 10px; left: auto; }
+ .cenik .back.back_white a{ color: #000; }
+ .cenik .back.back_white i{ background-image: url("../img/icons.png"); width: 59px; height: 12px; background-position: -167px -198px; -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg); }
+ .cenik .cenik__right p strong{ display: block; margin-bottom: -14px; }
+ .lide h2{ text-align: left; }
+ .person{ margin: 0 auto 30px auto; }
  .book{ width: 33%; } }
 @media only screen and (max-width: 500px){
+ .gallery .events ul{ font-size: 12px; }
  .footer__info b{ display: none; }
  .footer__info span, .footer__info a{ display: block; } }
 @media only screen and (max-width: 480px){
