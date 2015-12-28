@@ -387,8 +387,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .cenik .cenik__right{ padding: 30px; float: none; width: auto; min-height: 0; }
  .cenik .cenik__content{ padding: 100px 30px 30px 30px; float: none; width: auto; min-height: 0; }
  .lide{ padding: 80px 30px 30px 30px; min-height: 0; }
- .lide h2{ font-size: 24px; }
- .lide .back{ position: static; float: right; }
+ .lide .back{ position: static; }
  .akce{ min-height: 0; padding: 80px 30px 30px 30px; }
  .akce.lessitems .akce__item{ width: auto; }
  .akce .back{ position: static; }
