@@ -167,7 +167,8 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
 .pages__nav .page_8 i { background-image: url("../img/icons.png"); width: 60px; height: 61px; background-position: -204px -67px; }
 .pages__nav .page_8:hover { background: #fa580a; }
 
-.gallery { overflow: hidden; min-height: 412px; background: #fff; position: relative; clear: both; }
+.gallery { overflow: hidden; min-height: 412px; background: #fff; position: relative; clear: both; overflow: auto; *zoom: 1; }
+.gallery:after { content: " "; display: table; clear: both; }
 .gallery .events { float: left; width: 50%; padding: 61px 0 20px 93px; position: absolute; left: 0; top: 0; z-index: 20; background: #fff; }
 .gallery .events.is-wide { width: 100%; }
 .gallery .events h2 { font-size: 36px; font-weight: 100; letter-spacing: 5px; margin-bottom: 30px; }
