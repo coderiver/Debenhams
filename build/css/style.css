@@ -416,7 +416,7 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .header{ height: 50px; overflow: visible; }
  .header__lang{ display: none; }
  .header__info{ display: none; }
- .header__logo{ -webkit-transform: scale(0.6); -ms-transform: scale(0.6); transform: scale(0.6); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; top: 12px; -webkit-box-sizing: content-box; box-sizing: content-box; padding-bottom: 4px; }
+ .header__logo{ -webkit-transform: scale(0.6); -ms-transform: scale(0.6); transform: scale(0.6); -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; top: 12px; -webkit-box-sizing: content-box; box-sizing: content-box; padding-bottom: 2px; }
  .header__burger{ display: block; position: absolute; right: 15px; top: 14px; color: #fff; }
  .header__burger i{ font-size: 18px; }
  .header__moblang{ display: block; position: absolute; right: 60px; height: 50px; width: 60px; text-align: left; font-style: 12px; color: #fff; } }
