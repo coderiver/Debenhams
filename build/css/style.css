@@ -358,6 +358,11 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .header__down{ display: none; }
  .header__info{ right: 100px; left: auto; margin-left: 0; }
  .header__logo{ left: 15px; } }
+@media only screen and (max-width: 980px){
+ .gallery .events{ width: auto; position: static; float: none; padding: 30px; }
+ .gallery .events ul{ width: 50%; margin-bottom: 10px; }
+ .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; background: #000; }
+ .gallery .gallery__next, .gallery .gallery__prev{ text-shadow: 1px 0px 0 #000; top: 50%; margin-top: -20px; } }
 @media only screen and (max-width: 970px){
  .rezervace{ padding: 80px 30px 30px 30px; }
  .rezervace .back{ position: static; float: none; } }
@@ -366,13 +371,11 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .footer__copy{ margin: 0; float: none; margin-bottom: 15px; }
  .footer__info{ margin: 0; float: none; width: auto; position: static; }
  .footer__dev{ margin: 0; float: none; width: auto; position: static; padding: 0; text-align: center; margin-top: 15px; } }
+@media only screen and (min-width: 800px){
+ .top .top__video{ background-image: none !important; } }
 @media only screen and (max-width: 800px){
  .top .top__video video{ display: none; }
- .gallery .events{ width: auto; position: static; float: none; padding: 30px; }
- .gallery .events ul{ width: 50%; margin-bottom: 10px; }
- .gallery__pics{ width: auto; position: relative; float: none; height: auto; height: 200px; background: #000; }
  .gallery .gallery__slide{ background-size: contain; background-repeat: no-repeat; background-position: 50% 50%; height: 200px; }
- .gallery .gallery__next, .gallery .gallery__prev{ text-shadow: 1px 0px 0 #000; top: 50%; margin-top: -20px; }
  .popup{ width: 0; height: 0; overflow: hidden; }
  .is-inside .footer{ margin-top: 0; }
  .back{ display: block; text-align: left; float: none; margin-bottom: 10px; text-align: right; }
@@ -407,8 +410,6 @@ body { font-family: Roboto, sans-serif; font-size: 12px; line-height: 1.4; }
  .monthes ul::after{ display: none; }
  .monthes li a{ padding: 5px; }
  .book{ width: 20%; } }
-@media only screen and (min-width: 800px){
- .top .top__video{ background-image: none !important; } }
 @media only screen and (max-width: 790px){
  .header-placeholder{ display: none; }
  .player{ display: none; }
